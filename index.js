@@ -12,7 +12,7 @@ pfServer.use(express.json())
 pfServer.use(router)
 pfServer.use('/uploads', express.static('./uploads'))
 
-const PORT = 3001
+const PORT = 3001 || process.env.PORT
 
 pfServer.listen(PORT ,()=>{
     console.log(`Project fair sever started at : ${PORT}`);
